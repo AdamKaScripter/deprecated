@@ -105,13 +105,11 @@
   #:use-module (srfi srfi-1)
   #:use-module (ice-9 match))
 
-;;emacs-chronometrist
-
-(define-public stuff
+(define-public emacs-stuff
   (let ((commit "fc312334bbaac39289488e36a5f3b1b7e9b8b394")
         (revision "1"))
     (package
-      (name "stuff")
+      (name "emacs-stuff")
       (version (git-version "1.0.0" revision commit))
       (source
        (origin

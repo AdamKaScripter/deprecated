@@ -108,7 +108,7 @@
 ;;emacs-chronometrist
 
 (define-public stuff
-  (let ((commit "782f29ffb4d53afcfca950928ea4592c9817b8a9")
+  (let ((commit "fc312334bbaac39289488e36a5f3b1b7e9b8b394")
         (revision "1"))
     (package
       (name "stuff")

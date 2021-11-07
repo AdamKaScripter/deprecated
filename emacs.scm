@@ -119,7 +119,7 @@
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
-          (base32 "1vcaqvhdgr91pr7kqskbscs8awm8jp6dkh79h6w36i9ipmc4l4hl"))))
+          (base32 "0fc0bnb2pmfppzblgqnnhlpmvcgq5303751vlc1mfcsgbamhvn7g"))))
       (build-system emacs-build-system)
       (arguments
        `(#:include '("\\.el$")

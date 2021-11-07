@@ -12,3 +12,9 @@
   (set-frame-font "Terminus 20" nil t)
 
   (setq backup-directory-alist '(("." . "~/.emacs_saves"))))
+
+(defun stuff-generate-configs ()
+  )
+
+(defun stuff-generate-dot-emacs ()
+  )

@@ -125,3 +125,4 @@
      "This theme aims to be as identical as possible to the default Dark+
 color scheme used by Visual Studio Code.")
     (license license:gpl3+)))
+

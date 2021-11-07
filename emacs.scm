@@ -108,7 +108,7 @@
 ;;emacs-chronometrist
 
 (define-public stuff
-  (let ((commit "/var/log/guix/drvs/9i/jhb04fmk0xzqqkq76gxnkhgfmhkc83-mine.drv.bz2")
+  (let ((commit "782f29ffb4d53afcfca950928ea4592c9817b8a9")
         (revision "1"))
     (package
       (name "stuff")

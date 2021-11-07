@@ -118,7 +118,7 @@
          (method git-fetch)
          (uri (git-reference
                (url "https://github.com/AdamKaScripter/deprecated")
-               (commit (commit commit))))
+               (commit commit)))
          (file-name (git-file-name name version))
          (sha256
           (base32 "1vcaqvhdgr91pr7kqskbscs8awm8jp6dkh79h6w36i9ipmc4l4hl"))))

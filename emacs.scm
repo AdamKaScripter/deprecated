@@ -105,24 +105,34 @@
   #:use-module (srfi srfi-1)
   #:use-module (ice-9 match))
 
-(define-public emacs-test
-  (package
-    (name "emacs-test")
-    (version "2.0.0")
-    (source
-     (origin
-       (method git-fetch)
-       (uri (git-reference
-             (url "https://github.com/ianyepan/vscode-dark-plus-emacs-theme")
-             (commit (string-append "v" version))))
-       (file-name (git-file-name name version))
-       (sha256
-        (base32 "1vcaqvhdgr91pr7kqskbscs8awm8jp6dkh79h6w36i9ipmc4l4hl"))))
-    (build-system emacs-build-system)
-    (home-page "https://github.com/ianyepan/vscode-dark-plus-emacs-theme")
-    (synopsis "Emacs port of the default VS Code Dark+ theme")
-    (description
-     "This theme aims to be as identical as possible to the default Dark+
-color scheme used by Visual Studio Code.")
-    (license license:gpl3+)))
+;;emacs-chronometrist
 
+(define-public stuff
+  (let ((commit "")
+        (revision "1"))
+    (package
+      (name "stuff")
+      (version (git-version "1.0.0" revision commit))
+      (source
+       (origin
+         (method git-fetch)
+         (uri (git-reference
+               (url "https://github.com/AdamKaScripter/deprecated")
+               (commit (commit commit))))
+         (file-name (git-file-name name version))
+         (sha256
+          (base32 "1vcaqvhdgr91pr7kqskbscs8awm8jp6dkh79h6w36i9ipmc4l4hl"))))
+      (build-system emacs-build-system)
+      (arguments
+       `(#:include '("\\.el$")
+         #:phases
+         (modify-phases %standard-phases
+           (add-after 'unpack 'chdir-elisp
+             ;; Elisp directory is not in root of the source.
+             (lambda _
+               (chdir "stuff"))))))
+      (home-page "https://github.com/AdamKaScripter/deprecated")
+      (synopsis "")
+      (description
+       "")
+      (license license:gpl3+))))

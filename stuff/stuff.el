@@ -2,7 +2,8 @@
 
 (defun stuff-init ()
   (interactive)
-  (stuff-emacs-options-to-apply))
+  (stuff-emacs-options-to-apply)
+  (stuff-unix-misc))
 
 (defun stuff-emacs-options-to-apply ()
   (setq inhibit-startup-screen t)
@@ -18,3 +19,6 @@
 
 (defun stuff-generate-dot-emacs ()
   )
+
+(defun stuff-unix-misc ()
+  (shell-command "setxkbmap -option grp:alt_shift_toggle -layout 'us,ru'"))

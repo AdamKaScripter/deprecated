@@ -111,11 +111,11 @@
      (origin
        (method git-fetch)
        (uri (git-reference
-             (url "0fc0bnb2pmfppzblgqnnhlpmvcgq5303751vlc1mfcsgbamhvn7g")
+             (url "https://github.com/Rapptz/discord.py")
              (commit (string-append "v" version))))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "https://github.com/Rapptz/discord.py"))))
+        (base32 "0fc0bnb2pmfppzblgqnnhlpmvcgq5303751vlc1mfcsgbamhvn7g"))))
     (build-system python-build-system)
     (home-page "https://discordpy.readthedocs.io/en/stable")
     (synopsis "Modern, easy to use, feature-rich, and async ready API wrapper for Discord")

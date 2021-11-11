@@ -115,7 +115,7 @@
              (commit (string-append "v" version))))
        (file-name (git-file-name name version))
        (sha256
-        (base32 "0fc0bnb2pmfppzblgqnnhlpmvcgq5303751vlc1mfcsgbamhvn7g"))))
+        (base32 "0la2fcfn25xgy0iag6w2kjrpm7xqpa0zyy77cmfimksjc76c59bq"))))
     (build-system python-build-system)
     (home-page "https://discordpy.readthedocs.io/en/stable")
     (synopsis "Modern, easy to use, feature-rich, and async ready API wrapper for Discord")

@@ -117,8 +117,11 @@
        (sha256
         (base32 "0la2fcfn25xgy0iag6w2kjrpm7xqpa0zyy77cmfimksjc76c59bq"))))
     (build-system python-build-system)
+    (propagated-inputs
+     `(("python-aiohttp" ,python-aiohttp)))
     (home-page "https://discordpy.readthedocs.io/en/stable")
     (synopsis "Modern, easy to use, feature-rich, and async ready API wrapper for Discord")
     (description
      "")
     (license license:expat)))
+

@@ -120,8 +120,8 @@
     (propagated-inputs
      `(("python-aiohttp" ,python-aiohttp)))
     (home-page "https://discordpy.readthedocs.io/en/stable")
-    (synopsis "Modern, easy to use, feature-rich, and async ready API wrapper for Discord")
+    (synopsis "An API wrapper for Discord written in Python")
     (description
-     "")
+     "Modern, easy to use, feature-rich, and async ready API wrapper for Discord.")
     (license license:expat)))
 

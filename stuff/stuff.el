@@ -20,6 +20,20 @@
   (stuff-generate-configs))
 
 (defun stuff-emacs-options-to-apply ()
+  ;; for copyright
+  (setq user-full-name "Adam Kandur")
+  (setq user-mail-address "rndd@tuta.io")
+
+  (let ((guix-dir "~/p/guix"))
+    (if (file-directory-p guix-dir)
+        (progn
+          (with-eval-after-load 'yasnippet
+            (add-to-list 'yas-snippet-dirs
+                         (concat guix-dir
+                                 "/etc/snippets")))
+          (load-file (concat guix-dir
+                             "/etc/copyright.el")))))
+
   (setq inhibit-startup-screen t)
   (menu-bar-mode 0)
   (tool-bar-mode 0)

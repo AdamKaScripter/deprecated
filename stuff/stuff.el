@@ -1,24 +1,49 @@
 (provide 'stuff)
 
+(defvar stuff-dot-channels-scm
+  "
+(list (channel
+       (name 'guix)
+       (url \"https://git.savannah.gnu.org/git/guix.git\"))
+      (channel
+        (name 'nonguix)
+        (url \"https://gitlab.com/nonguix/nonguix\"))
+      (channel
+        (name 'mine)
+        (url \"https://github.com/AdamKaScripter/deprecated\")))
+")
+
 (defun stuff-init ()
   (interactive)
   (stuff-emacs-options-to-apply)
-  (stuff-unix-misc))
+  (stuff-unix-misc)
+  (stuff-generate-configs))
 
 (defun stuff-emacs-options-to-apply ()
   (setq inhibit-startup-screen t)
   (menu-bar-mode 0)
   (tool-bar-mode 0)
 
+  (add-hook 'after-init-hook #'global-emojify-mode)
+
   (set-frame-font "Terminus 20" nil t)
 
   (setq backup-directory-alist '(("." . "~/.emacs_saves"))))
 
 (defun stuff-generate-configs ()
-  )
+  (stuff-generate-dot-emacs)
+  (stuff-generate-dot-channels-scm))
 
 (defun stuff-generate-dot-emacs ()
-  )
+  (stuff-write-to-file "~/.emacs"
+                       "(require 'stuff)\n(stuff-init)\n"))
+
+(defun stuff-generate-dot-channels-scm ()
+  (stuff-write-to-file "~/.channels.scm"
+                       stuff-dot-channels-scm))
 
 (defun stuff-unix-misc ()
   (shell-command "setxkbmap -option grp:alt_shift_toggle -layout 'us,ru'"))
+
+(defun stuff-write-to-file (file string)
+  (write-region string nil file))

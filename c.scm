@@ -44,7 +44,9 @@
                 "0anfg24whrmjgfh24akc6i78gbm4fg8rq55nyni4qahp8adysxq3"))))
     (build-system cmake-build-system)
     (inputs `(("sdl2" ,sdl2)))
-    (native-inputs `(("libpng" ,libpng)))
+    (native-inputs `(("libpng" ,libpng)
+                     ("sdl2" ,sdl2)
+                     ("pkg-config" ,pkg-config)))
     (propagated-inputs `(("libpng" ,libpng)))
     ;; (arguments
     ;;  '(#:configure-flags

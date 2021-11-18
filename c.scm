@@ -8,6 +8,7 @@
   #:use-module (guix build-system gnu)
   #:use-module (guix build-system trivial)
   #:use-module (gnu packages)
+  #:use-module (gnu packages sdl)
   #:use-module (gnu packages image)
   #:use-module (gnu packages bash)
   #:use-module (gnu packages bootstrap)

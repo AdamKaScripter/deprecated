@@ -43,11 +43,13 @@
                (base32
                 "0anfg24whrmjgfh24akc6i78gbm4fg8rq55nyni4qahp8adysxq3"))))
     (build-system cmake-build-system)
-    (inputs `(("sdl2" ,sdl2)))
+    (inputs `(("sdl2" ,sdl2)
+              ("pkg-config" ,pkg-config)))
     (native-inputs `(("libpng" ,libpng)
                      ("sdl2" ,sdl2)
                      ("pkg-config" ,pkg-config)))
-    (propagated-inputs `(("libpng" ,libpng)))
+    (propagated-inputs `(("libpng" ,libpng)
+                         ("pkg-config" ,pkg-config)))
     ;; (arguments
     ;;  '(#:configure-flags
     ;;    '("-DBUILD_SHARED_LIBS=ON")))

@@ -43,7 +43,7 @@
                (base32
                 "0anfg24whrmjgfh24akc6i78gbm4fg8rq55nyni4qahp8adysxq3"))))
     (build-system cmake-build-system)
-    (native-inputs `(("sdl2" ,sdl2)))
+    (inputs `(("sdl2" ,sdl2)))
     (native-inputs `(("libpng" ,libpng)))
     (propagated-inputs `(("libpng" ,libpng)))
     ;; (arguments
@@ -54,3 +54,4 @@
      "")
     (home-page "")
     (license #f)))
+

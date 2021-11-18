@@ -60,7 +60,7 @@
            (lambda _
              ;; The script attempts to checkout the uAssets submodule,
              ;; but we already did so with git-fetch.
-             (invoke "git submodule update"))))))
+             (invoke "git submodule update --recursive --init"))))))
     (synopsis "")
     (description
      "")

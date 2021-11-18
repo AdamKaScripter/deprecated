@@ -51,9 +51,16 @@
                      ))
     (propagated-inputs `(("libpng" ,libpng)
                          ("pkg-config" ,pkg-config)))
-    ;; (arguments
-    ;;  '(#:configure-flags
-    ;;    '("-DBUILD_SHARED_LIBS=ON")))
+    (arguments
+     '(#:phases
+       (modify-phases (map (lambda (phase)
+                             (assq phase %standard-phases))
+                           '(set-paths unpack patch-source-shebangs))
+         (add-after 'unpack 'do-not-depend-on-git
+           (lambda _
+             ;; The script attempts to checkout the uAssets submodule,
+             ;; but we already did so with git-fetch.
+             (invoke "git submodule update"))))))
     (synopsis "")
     (description
      "")

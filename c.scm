@@ -45,9 +45,10 @@
     (build-system cmake-build-system)
     (inputs `(("sdl2" ,sdl2)
               ("pkg-config" ,pkg-config)))
-    (native-inputs `(("libpng" ,libpng)
+    (native-inputs `(("pkg-config" ,pkg-config)
+                     ("libpng" ,libpng)
                      ("sdl2" ,sdl2)
-                     ("pkg-config" ,pkg-config)))
+                     ))
     (propagated-inputs `(("libpng" ,libpng)
                          ("pkg-config" ,pkg-config)))
     ;; (arguments

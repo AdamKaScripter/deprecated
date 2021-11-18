@@ -39,7 +39,7 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "17iknzqs6dl0ixajplc47ylkyynwpi3x2dxh56wa8ylhgy53d09x"))))
+                "0anfg24whrmjgfh24akc6i78gbm4fg8rq55nyni4qahp8adysxq3"))))
     (build-system cmake-build-system)
     ;; (arguments
     ;;  '(#:configure-flags

@@ -42,6 +42,8 @@
 
   (set-frame-font "Terminus 20" nil t)
 
+  (load-theme 'tsdh-light)
+
   (setq backup-directory-alist '(("." . "~/.emacs_saves"))))
 
 (defun stuff-generate-configs ()

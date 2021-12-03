@@ -38,7 +38,7 @@
                                   "/node-v" version ".tar.xz"))
               (sha256
                (base32
-                "1vc9rypkgr5i5y946jnyr9jjpydxvm74p1s17rg2zayzvlddg89z"))
+                "1bb3rjb2xxwn6f4grjsa7m1pycp0ad7y6vz7v2d7kbsysx7h08sc"))
               (modules '((guix build utils)))
               (snippet
                `(begin

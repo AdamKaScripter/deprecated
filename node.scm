@@ -29,7 +29,7 @@
 (define-public my-node-lts
   (package
     (inherit node)
-    (version "14.18.1")
+    (version "16.13.1")
     (source (origin
               (method url-fetch)
               (uri (string-append "https://nodejs.org/dist/v" version

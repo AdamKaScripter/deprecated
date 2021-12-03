@@ -158,9 +158,10 @@
 
                ;; FIXME: These tests fail in the build container, but they don't
                ;; seem to be indicative of real problems in practice.
-               (for-each delete-file
-                         '("test/parallel/test-cluster-master-error.js"
-                           "test/parallel/test-cluster-master-kill.js"))
+               ;; (for-each delete-file
+               ;;           '("test/parallel/test-cluster-master-error.js"
+               ;;             "test/parallel/test-cluster-master-kill.js"))
+               ;; no such files
 
                ;; These require a DNS resolver.
                (for-each delete-file

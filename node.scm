@@ -29,6 +29,7 @@
 (define-public my-node-lts
   (package
     (inherit node)
+    (name "my-node")
     (version "16.13.1")
     (source (origin
               (method url-fetch)

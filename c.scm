@@ -42,7 +42,7 @@
               (file-name (git-file-name name version))
               (sha256
                (base32
-                "0anfg24whrmjgfh24akc6i78gbm4fg8rq55nyni4qahp8adysxq3"))))
+                "1kmk5a76fs9krqkv4cc7wv6vlg0zlszz0yf2dlymwzmyn5hb758y"))))
     (build-system cmake-build-system)
     (inputs `(("sdl2" ,sdl2)
               ("pkg-config" ,pkg-config)))

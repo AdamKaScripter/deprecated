@@ -44,24 +44,24 @@
                (base32
                 "1kmk5a76fs9krqkv4cc7wv6vlg0zlszz0yf2dlymwzmyn5hb758y"))))
     (build-system cmake-build-system)
-    (inputs `(("sdl2" ,sdl2)
-              ("pkg-config" ,pkg-config)))
-    (native-inputs `(("pkg-config" ,pkg-config)
-                     ("libpng" ,libpng)
-                     ("sdl2" ,sdl2)
-                     ))
-    (propagated-inputs `(("libpng" ,libpng)
-                         ("pkg-config" ,pkg-config)))
-    (arguments
-     '(#:phases
-       (modify-phases (map (lambda (phase)
-                             (assq phase %standard-phases))
-                           '(set-paths unpack patch-source-shebangs))
-         (add-after 'unpack 'do-not-depend-on-git
-           (lambda _
-             ;; The script attempts to checkout the uAssets submodule,
-             ;; but we already did so with git-fetch.
-             (invoke "git submodule update --recursive --init"))))))
+    ;; (inputs `(("sdl2" ,sdl2)
+    ;;           ("pkg-config" ,pkg-config)))
+    ;; (native-inputs `(("pkg-config" ,pkg-config)
+    ;;                  ("libpng" ,libpng)
+    ;;                  ("sdl2" ,sdl2)
+    ;;                  ))
+    ;; (propagated-inputs `(("libpng" ,libpng)
+    ;;                      ("pkg-config" ,pkg-config)))
+    ;; (arguments
+    ;;  '(#:phases
+    ;;    (modify-phases (map (lambda (phase)
+    ;;                          (assq phase %standard-phases))
+    ;;                        '(set-paths unpack patch-source-shebangs))
+    ;;      (add-after 'unpack 'do-not-depend-on-git
+    ;;        (lambda _
+    ;;          ;; The script attempts to checkout the uAssets submodule,
+    ;;          ;; but we already did so with git-fetch.
+    ;;          (invoke "git submodule update --recursive --init"))))))
     (synopsis "")
     (description
      "")

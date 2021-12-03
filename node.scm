@@ -211,7 +211,7 @@
      `(;; Runtime dependencies for binaries used as a bootstrap.
        ("c-ares" ,c-ares-for-node)
        ("brotli" ,brotli)
-       ("icu4c" ,icu4c-67)
+       ("icu4c" ,icu4c-69) ;; replace icu4c-67
        ("libuv" ,libuv-for-node)
        ("nghttp2" ,nghttp2 "lib")
        ("openssl" ,openssl)

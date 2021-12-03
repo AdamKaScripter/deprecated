@@ -37,7 +37,8 @@
               (method git-fetch)
               (uri (git-reference
                     (url "https://github.com/nesbox/TIC-80")
-                    (commit (string-append "v" version))))
+                    (commit (string-append "v" version))
+                    (recursive? #t)))
               (file-name (git-file-name name version))
               (sha256
                (base32

@@ -69,3 +69,9 @@
 
 (defun stuff-write-to-file (file string)
   (write-region string nil file))
+
+(defun stuff-suspend ()
+  (interactive)
+  (shell-command "loginctl suspend && xlock"))
+
+(global-set-key (kbd "<f5>") 'stuff-suspend)

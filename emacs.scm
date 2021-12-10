@@ -106,7 +106,7 @@
   #:use-module (ice-9 match))
 
 (define-public emacs-stuff
-  (let ((commit "936d602ab6b51e6558736470ac29079052bdc01c")
+  (let ((commit "135e84fd3e9d923525d2f5807a4beb7ad5510453")
         (revision "2"))
     (package
       (name "emacs-stuff")
@@ -119,7 +119,7 @@
                (commit commit)))
          (file-name (git-file-name name version))
          (sha256
-          (base32 "0v16fflzg2p2ni00g2yj97mpd5j4v085rniwdk59m14iclab7r7l"))))
+          (base32 "198d5fcj6wmngnsm02i9fblf2in1s451mfwba16bqwjmrzghcl9f"))))
       (build-system emacs-build-system)
       (arguments
        `(#:include '("\\.el$")

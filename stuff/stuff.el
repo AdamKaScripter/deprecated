@@ -74,4 +74,5 @@
   (interactive)
   (shell-command "loginctl suspend && xlock"))
 
-(global-set-key (kbd "<f5>") 'stuff-suspend)
+
+(global-set-key (kbd "C-x <f5>") 'stuff-suspend)

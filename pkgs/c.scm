@@ -61,7 +61,7 @@
 
 (define-public diff2dates
   (let ((home-page "https://github.com/AdamKaScripter/deprecated")
-        (commit "32773110098490792e11c7781c9a422cee5fb3ed")
+        (commit "0cb8afd18ed3457b7c97274572fe2b91b5809049")
         (revision "1"))
     (package
       (name "diff2dates")

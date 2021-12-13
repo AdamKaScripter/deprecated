@@ -25,6 +25,7 @@
   ;; for copyright
   (setq user-full-name "Adam Kandur")
   (setq user-mail-address "rndd@tuta.io")
+  (setq comment-style 'extra-line)
 
   (let ((guix-dir "~/p/guix"))
     (if (file-directory-p guix-dir)

@@ -1,4 +1,4 @@
-(define-module (c)
+(define-module (pkgs c)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module (guix utils)
   #:use-module (guix packages)

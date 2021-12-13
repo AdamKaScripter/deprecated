@@ -1,4 +1,4 @@
-(define-module (node)
+(define-module (pkgs node)
   #:use-module ((guix licenses) #:prefix license:)
   #:use-module ((guix build utils) #:select (alist-replace))
   #:use-module (guix packages)

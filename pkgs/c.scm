@@ -75,7 +75,7 @@
                 (file-name (git-file-name name version))
                 (sha256
                  (base32
-                  "1h80jvhn2nzpgsdvdxbc8q1xa2jjqg74m738pg49xay8vsn9b0xx"))))
+                  "1777di0ydbnqns4pfqv3km3j1bqj1zsd61j4iyrdya0kjh5zw7c9"))))
       (build-system gnu-build-system)
       (arguments
        `(#:phases

@@ -85,7 +85,16 @@
            (add-after 'unpack 'change-directory
              ;; diff2dates directory is not in root of the source.
              (lambda _
-               (chdir "tools/diff2dates"))))))
+               (chdir "tools/diff2dates")))
+           (replace 'install
+             (lambda* (#:key outputs #:allow-other-keys)
+               (let* ((out (assoc-ref outputs "out"))
+                      (include-dir (string-append out "/include"))
+                      (lib-dir (string-append out "/lib"))
+                      (headers (find-files "." "\\.h$")))
+                 (install-file "diff2dates.h" include-dir)
+                 (install-file "libdiff2dates.so" lib-dir)
+                 #t))))))
       (synopsis "")
       (description
        "")

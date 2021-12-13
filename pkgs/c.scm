@@ -91,7 +91,7 @@
                (let* ((out (assoc-ref outputs "out"))
                       (include-dir (string-append out "/include"))
                       (lib-dir (string-append out "/lib"))
-                      (bin-dit (string-append out "/bin")))
+                      (bin-dir (string-append out "/bin")))
                  (install-file "diff2dates.h" include-dir)
                  (install-file "libdiff2dates.so" lib-dir)
                  (install-file "diff2dates" bin-dir)

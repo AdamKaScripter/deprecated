@@ -80,11 +80,12 @@
       (arguments
        `(#:phases
          (modify-phases %standard-phases
+           ;; no autogen script
            (delete 'configure)
            (add-after 'unpack 'change-directory
              ;; diff2dates directory is not in root of the source.
              (lambda _
-               (chdir "stuff"))))))
+               (chdir "tools/diff2dates"))))))
       (synopsis "")
       (description
        "")

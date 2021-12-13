@@ -10,7 +10,7 @@ $(PNAME) :
 clean :
 	rm $(PNAME) $(PNAME).o
 
-test : $(PNAME)
+check : $(PNAME)
 	gcc $(CFLAGS) -o tests tests.c $(PNAME).o
 	./tests
 	rm ./tests $(PNAME).o

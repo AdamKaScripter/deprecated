@@ -125,7 +125,7 @@
        `(#:include '("\\.el$")
          #:phases
          (modify-phases %standard-phases
-           (add-after 'unpack 'chdir-elisp
+           (add-after 'unpack 'change-directory
              ;; Elisp directory is not in root of the source.
              (lambda _
                (chdir "stuff"))))))

@@ -59,13 +59,13 @@
     (home-page "")
     (license #f)))
 
-(define-public tic-80
-  (let ((home-page "")
-        (commit "")
+(define-public diff2dates
+  (let ((home-page "https://github.com/AdamKaScripter/deprecated")
+        (commit "32773110098490792e11c7781c9a422cee5fb3ed")
         (revision "1"))
     (package
-      (name "tic-80")
-      (version "0.90.1723")
+      (name "diff2dates")
+      (version (git-version "1.0.0" revision commit))
       (source (origin
                 (method git-fetch)
                 (uri (git-reference
@@ -77,6 +77,13 @@
                  (base32
                   "1kmk5a76fs9krqkv4cc7wv6vlg0zlszz0yf2dlymwzmyn5hb758y"))))
       (build-system gnu-build-system)
+      (arguments
+       `(#:phases
+         (modify-phases %standard-phases
+           (add-after 'unpack 'change-directory
+             ;; diff2dates directory is not in root of the source.
+             (lambda _
+               (chdir "stuff"))))))
       (synopsis "")
       (description
        "")

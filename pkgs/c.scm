@@ -59,3 +59,26 @@
     (home-page "")
     (license #f)))
 
+(define-public tic-80
+  (let ((home-page "")
+        (commit "")
+        (revision "1"))
+    (package
+      (name "tic-80")
+      (version "0.90.1723")
+      (source (origin
+                (method git-fetch)
+                (uri (git-reference
+                      (url home-page)
+                      (commit commit)
+                      (recursive? #t)))
+                (file-name (git-file-name name version))
+                (sha256
+                 (base32
+                  "1kmk5a76fs9krqkv4cc7wv6vlg0zlszz0yf2dlymwzmyn5hb758y"))))
+      (build-system gnu-build-system)
+      (synopsis "")
+      (description
+       "")
+      (home-page home-page)
+      (license license:gpl3+))))

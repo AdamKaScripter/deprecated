@@ -10,7 +10,8 @@
 
 #include "diff2dates.h"
 
-int main(void)
+int
+main(void)
 {
   Date date1, date2, date_diff;
 

@@ -1,3 +1,10 @@
+/*
+ * by Adam Kandur
+ * 
+ * Program and library to calculate the number of days,
+ * months and years between two dates dates
+ */
+
 #include<stdio.h>
 #include<stdlib.h>
 #include<stdbool.h>
@@ -74,7 +81,8 @@ is_year_leap (int year)
 /*
  * counts difference between two dates
  */
-Date diff_dates (Date date1, Date date2)
+Date
+diff_dates (Date date1, Date date2)
 {
   Date result;
 
@@ -133,9 +141,17 @@ Date diff_dates (Date date1, Date date2)
       date2.year -= 1;
     }
 
-  result.day   = date2.day   - date1.day;
-  result.month = date2.month - date1.month;
-  result.year  = date2.year  - date1.year;
+  if (date2.year >= date1.year)
+    {
+      result.day   = date2.day   - date1.day;
+      result.month = date2.month - date1.month;
+      result.year  = date2.year  - date1.year;
+    }
+  else
+    {
+      printf("First date must be earlier or equal to second.\n");
+      exit (EXIT_FAILURE);
+    }
 
   return result;
 }

@@ -1,10 +1,16 @@
 CFLAGS = -g -Wall
+PNAME  = diff2dates
 
-all : diff2dates
-	gcc $(CFLAGS) -o diff2dates main.c diff2dates.o
+all : $(PNAME)
+	gcc $(CFLAGS) -o $(PNAME) main.c $(PNAME).o
 
-diff2dates :
-	gcc $(CFLAGS) -c diff2dates.c
+$(PNAME) :
+	gcc $(CFLAGS) -c $(PNAME).c
 
 clean :
-	rm diff2dates diff2dates.o
+	rm $(PNAME) $(PNAME).o
+
+test : $(PNAME)
+	gcc $(CFLAGS) -o tests tests.c $(PNAME).o
+	./tests
+	rm ./tests $(PNAME).o

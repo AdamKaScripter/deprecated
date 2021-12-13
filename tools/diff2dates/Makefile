@@ -2,7 +2,7 @@ CFLAGS = -g -Wall
 PNAME  = diff2dates
 LNAME  = libdiff2dates.so
 
-all : $(PNAME).o $(LNAME)
+build : $(PNAME).o $(LNAME)
 	gcc $(CFLAGS) -o $(PNAME) main.c $(PNAME).o
 
 $(PNAME).o :

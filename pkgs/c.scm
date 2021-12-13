@@ -94,7 +94,7 @@
                       (bin-dit (string-append out "/bin")))
                  (install-file "diff2dates.h" include-dir)
                  (install-file "libdiff2dates.so" lib-dir)
-                 (install-file "diff2dates" lib-dir)
+                 (install-file "diff2dates" bin-dir)
                  #t))))))
       (synopsis "")
       (description

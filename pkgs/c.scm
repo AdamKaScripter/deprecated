@@ -79,6 +79,7 @@
       (build-system gnu-build-system)
       (arguments
        `(#:phases
+         (delete 'configure)
          (modify-phases %standard-phases
            (add-after 'unpack 'change-directory
              ;; diff2dates directory is not in root of the source.

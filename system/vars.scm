@@ -1,5 +1,5 @@
 (define-module (system vars)
-  #export (%my-system-packages))
+  #:export (%my-system-packages))
 
 (define %my-desktop-services
   (append

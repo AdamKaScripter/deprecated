@@ -26,7 +26,7 @@
   (setq user-full-name "Adam Kandur")
   (setq user-mail-address "rndd@tuta.io")
   (setq comment-style 'extra-line)
-
+  
   (let ((guix-dir "~/p/guix"))
     (if (file-directory-p guix-dir)
         (progn
@@ -42,6 +42,8 @@
   (tool-bar-mode 0)
   ;; needed for running emacs inside of emacs
   (scroll-bar-mode -1)
+
+  (editorconfig-mode 1)
 
   (add-hook 'after-init-hook #'global-emojify-mode)
 

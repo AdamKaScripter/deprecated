@@ -1,4 +1,5 @@
 (define-module (system vars)
+  #:use-module (gnu)
   #:export (%my-system-packages))
 
 (define %my-desktop-services

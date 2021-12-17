@@ -2,12 +2,12 @@
   #:use-module (gnu)
   #:use-module (pkgs emacs)
   #:export (%my-main-user-groups
-            %my-desktop-packages))
+            %my-system-packages))
 
 (define %my-main-user-groups
   '("wheel" "netdev" "audio" "video" "docker" "libvirt" "kvm"))
 
-(define %my-desktop-packages
+(define %my-system-packages
   `("emacs"
     "emacs-exwm"
     "emacs-desktop-environment"

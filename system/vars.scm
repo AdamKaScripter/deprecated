@@ -1,7 +1,8 @@
 (define-module (system vars)
   #:use-module (gnu)
   #:use-module (pkgs emacs)
-  #:export (%my-system-packages))
+  #:export (%my-main-user-groups
+            %my-desktop-packages))
 
 (define %my-main-user-groups
   '("wheel" "netdev" "audio" "video" "docker" "libvirt" "kvm"))

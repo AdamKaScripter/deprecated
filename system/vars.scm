@@ -1,5 +1,6 @@
 (define-module (system vars)
   #:use-module (gnu)
+  #:use-module (pkgs emacs)
   #:export (%my-system-packages))
 
 (define %my-desktop-services
